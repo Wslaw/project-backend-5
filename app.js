@@ -3,7 +3,6 @@ import morgan from "morgan";
 import cors from "cors";
 import mongoose from "mongoose";
 import "dotenv/config";
-import multer from "multer";
 
 import contactsRouter from "./routes/contactsRouter.js";
 import authRouter from "./routes/authRouter.js";
@@ -13,9 +12,7 @@ const { DB_HOST, PORT = 3000 } = process.env;
 
 const app = express();
 
-const multerConfig = multer.diskStorage({
-  destination: 
-})
+
 app.use(morgan("tiny"));
 app.use(cors());
 app.use(express.json());
